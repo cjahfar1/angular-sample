@@ -1,0 +1,22 @@
+<a routerLink='/home'>Home</a>
+<a routerLink='/bigComponent'>Feature</a>
+<h1>
+  Home Component
+</h1>
+<p>
+  Home component will be the first screen when the user visits our page.
+  <widget1 [param] = "WidgetParam" [strParam]="str"></widget1>
+  <widget2 [paramval] = "WidgetParam" [strParam]="str" #w2></widget2>
+  <widget3 [param] = "WidgetParam" [strParam]="str" ></widget3>
+  <widget3 [param] = "WidgetParam" [strParam]="str" #w3 (onValueUpdate)="onWidgetValueUpdate($event)"></widget3>
+
+  <input type="button" (click)="onMyFunc()" value="Set Time"><br>
+  <label>I'm directly accessed from w3:{{w3.param.Param2}}</label>
+<br>
+  <label>I'm updated by eventEmitter:{{updatedValue.Param2}}</label>
+
+</p>
+
+<p>
+  <input type="button" value="Get w2 myprop using viewchild" (click)="getW2ValueByViewChild()">
+</p>
